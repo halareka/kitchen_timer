@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>угу</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+   .e-c-progress {
+       fill: none;
+       stroke: #000000;
+       stroke-width: 4px;
+       transition: stroke-dashoffset 3s;
+
+   }
+  </style>
+</head>
+<body>
+<!--вот тут сначит построим огромни меню -->
+
+<div align = "center" >
+<div id="topNavLine"><b><p align="center"><b>kitchen timer</b></p></b><b><p align="left"><b>I</b></p></b></div><br><br>
+<div class="container">
+  <div class="setters">
+    <div class="minutes-set">
+      <button data-setter="minutes-plus">+</button>
+      <button data-setter="minutes-minus">-</button>
+    </div>
+    <div class="seconds-set">
+      <button data-setter="seconds-plus">+</button>
+      <button data-setter="seconds-minus">-</button>
+    </div>
+  </div>
+   <div class="circle">
+      <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+         <g transform="translate(110,110)">
+            <circle r="100" class="e-c-base"/>
+            <g transform="rotate(-90)">
+               <circle id="cirl" r="100" class="e-c-progress" style="stroke: #545454"/>
+               <g id="e-pointer">
+                  <circle id="cirll" cx="100" cy="0" r="8" class="e-c-pointer" />
+               </g>
+            </g>
+         </g>
+      </svg>
+   </div>
+   <!--кнопачки(основные)-->
+   <br><br>
+
+
+
+   <div id="container" align="center">
+      <div class="menu">
+            <button  data-setter-one="seconds-plus" type="submit" id="submit1"><b>+1m</b></button>
+            <button style="margin-left:13px;" data-setter-one="seconds-plus" type="submit" id="submit2"><b>+5m</b></button>
+            <button style="margin-left:13px;" data-setter-one="seconds-plus" type="submit" id="submit3"><b>+10m</b></button>
+            <button data-setter-three ="seconds-plus" type="submit" id="submit11"><b>+20s</b></button>
+            <button data-setter-three ="seconds-plus" type="submit" id="submit12"><b>+30s</b></button>
+            <button data-setter-three ="seconds-plus" type="submit" id="submit9"><b>-30s</b></button>
+            <button data-setter-three ="seconds-plus" type="submit" id="submit8"><b>-20s</b></button>
+      </div>
+
+      <br>
+      <div class="menu2">
+         <b style="color:black;margin-left:0px;">± </b><input type="range" min="0" max="1" step="0.1" value="0.5" id="id_range"><b style="color:black;margin-left:3px;">−</b>
+      </div>
+      <div class="menu44" style="color:black;margin-left:-155px;" >
+         <div class="pr" >
+            <p style="color: rgb(103, 103, 103);margin-left: 20px;margin-top: 7px;"><b>цветовые<br>темы-фон</b></p>
+         </div>
+      </div>
+      <div class="menu55" style="color:black;margin-left:155px;margin-top: -75px;" >
+         <div class="pr" >
+            <p style="color: rgb(103, 103, 103);margin-left: 17px;margin-top: 7px;white-space:nowrap"><b>звук в конце<br>таймера</b></p>
+         </div>
+      </div>
+      <div class="menu4" style="color:black;margin-left:-155px;white-space:nowrap" >
+         <div class="pr">
+            <table >
+               <tr>
+                  <td><input name="lol" type="radio" id="shest0"></td>
+                  <td style="color: rgb(103, 103, 103);"><b>фиолетовый</b></td>
+               </tr>
+               <tr>
+                  <td><input name="lol" type="radio" id="shest1"></td>
+                  <td style="color: rgb(103, 103, 103);"><b>розовый</b></td>
+               </tr>
+               <tr>
+                  <td><input name="lol" type="radio" id="shest2"></td>
+                  <td style="color: rgb(103, 103, 103);"><b>лаймовый</b></td>
+               </tr>
+               <tr>
+                  <td><input name="lol" type="radio" id="shest3"></td>
+                  <td style="color: rgb(103, 103, 103);"><b>темный</b></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="menu5" style="color:black;margin-left:155px;margin-top: -150px;" >
+         <div class="pr" >
+            <table >
+
+               <tr>
+                  <td><input type="radio" id="checkone" name="LOL"></td>
+                  <td style="color: rgb(103, 103, 103);"><b>советский</b></td>
+               </tr>
+               <tr>
+                  <td><input type="radio" id="checktwo" name="LOL"></td>
+                  <td style="color: rgb(103, 103, 103);"><b>колокольный</b></td>
+               </tr>
+               <tr>
+                  <td><input type="radio" id="checkthree" name="LOL"></td>
+                  <td style="color: rgb(103, 103, 103);"><b>быстрый</b></td>
+               </tr>
+               <tr>
+                  <td><input type="radio" id="checkfour" name="LOL"></td>
+                  <td style="color: rgb(103, 103, 103);"><b>звонкий</b></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+     
+   <script>
+      document.querySelector('#submit1').onclick = function(){
+         changeWholeTime(60);
+      }
+      document.querySelector('#submit2').onclick = function(){
+         changeWholeTime(300);
+      }
+      document.querySelector('#submit3').onclick = function(){
+         changeWholeTime(600);
+      }
+   </script>
+   <script>
+      document.querySelector('#submit11').onclick = function(){
+         changeWholeTime(20);
+      }
+      document.querySelector('#submit12').onclick = function(){
+         changeWholeTime(30);
+      }
+      /*
+      */
+      document.querySelector('#submit9').onclick = function(){
+         changeWholeTime(-30);
+      }
+      document.querySelector('#submit8').onclick = function(){
+         changeWholeTime(-20);
+      }
+   </script>
+      <div class="controlls">
+         <div class="display-remain-time">00:30</div>
+         <button class="play" id="pause"></button>
+      </div>
+   <div>
+
+   </div>
+     
+</div>
+
+
+</div>
+
+
+<script>
+</script>
+<script>
+   /*
+   #fcf1ff
+   #e680ff
+   */
+var c = document.querySelector('#shest0');
+var c1 = document.querySelector('#shest1');
+var c2 = document.querySelector('#shest2');
+var r = document.querySelector('#shest3');
+let headingElement = document.querySelector('#topNavLine');
+let headingElement1 = document.querySelector('body');
+let head= document.querySelector('.e-c-progress');
+c1.onclick = function() {
+   if (c1.checked) {
+      headingElement.style.backgroundColor = '#ffc1c1';headingElement1.style.background = '#ffeaea';
+   }
+}
+c2.onclick = function() {
+   if (c2.checked) {
+      headingElement.style.backgroundColor = '#bcffd6';headingElement1.style.background = '#ebfff3';
+   }
+}
+r.onclick = function(){
+   headingElement.style.background = '#545454';headingElement1.style.background = 'rgb(238, 239, 240)';
+}
+c.onclick = function() {
+   if (c.checked) {
+      headingElement.style.backgroundColor = '#eeb1ff';headingElement1.style.background = '#fcf1ff';
+   }
+}
+</script>
+<script async src="script.js">
+</script>  
+<script  src="./script.js"></script>
+</body>
+</html>
