@@ -6,6 +6,34 @@
   <title>кухонный-таймер</title>
   <link rel="stylesheet" href="./style.css">
   <style>
+       input[type='radio']:after {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      top: -2px;
+      left: -1px;
+      position: relative;
+      background-color: #d1d3d1;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid white;
+   }
+
+   input[type='radio']:checked:after {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      top: -2px;
+      left: -1px;
+      position: relative;
+      background-color: #d2abe9;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid white;
+   }
+
    .e-c-progress {
        fill: none;
        stroke: #000000;
@@ -19,7 +47,7 @@
 <!--вот тут сначит построим огромни меню -->
 
 <div align = "center" >
-<div id="topNavLine" style="border-radius: 10px;margin-top: -10px;"><b><p align="center"><b>kitchen timer</b></p></b><p align="right" style="color: #000000; margin-left:-10px;"><b>I</b></p></div><br><br>
+<div id="topNavLine"><b><p align="center"><b>kitchen timer</b></p></b><p align="right" style="color: #000000; margin-left:-10px;"><b>I</b></p></div><br><br>
 <div class="container">
   <div class="setters">
     <div class="minutes-set">
