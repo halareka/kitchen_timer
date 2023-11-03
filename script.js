@@ -21,37 +21,50 @@ function playSound() {
 function EndSound() {
   var audio = new Audio('./sound/sound_end/end.mp3');
   audio.play();
+  audio.volume = id_range1.value;
+
 }
 function EndSound1() {
   var audio = new Audio('./sound/sound_end/end1.mp3');
   audio.play();
+  audio.volume = id_range1.value;
 
 }
 function EndSound2() {
   var audio = new Audio('./sound/sound_end/end2.mp3');
   audio.play();
+  audio.volume = id_range1.value;
 
 }
 function EndSound3() {
   var audio = new Audio('./sound/sound_end/end3.mp3');
   audio.play();
+  audio.volume = id_range1.value;
 
 }
 function EndSoundd() {
   var audio = new Audio('./sound/sound_endd/endd.mp3');
   audio.play();
+  audio.volume = id_range1.value;
+
 }
 function EndSoundd1() {
   var audio = new Audio('./sound/sound_endd/endd1.mp3');
   audio.play();
+  audio.volume = id_range1.value;
+
 }
 function EndSoundd2() {
   var audio = new Audio('./sound/sound_endd/endd2.mp3');
   audio.play();
+  audio.volume = id_range1.value;
+
 }
 function EndSoundd3() {
   var audio = new Audio('./sound/sound_endd/endd3.mp3');
   audio.play();
+  audio.volume = id_range1.value;
+
 }
 
 function update(value, timePercent) {
