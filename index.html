@@ -6,7 +6,7 @@
   <title>кухонный-таймер</title>
   <link rel="stylesheet" href="./style.css">
   <style>
-       input[type='radio']:after {
+    input[type='radio']:after {
       width: 15px;
       height: 15px;
       border-radius: 15px;
@@ -47,7 +47,7 @@
 <!--вот тут сначит построим огромни меню -->
 
 <div align = "center" >
-<div id="topNavLine"><b><p align="center"><b>kitchen timer</b></p></b><p align="right" style="color: #000000; margin-left:-10px;"><b>I</b></p></div><br><br>
+<div id="topNavLine" style="border-radius: 10px;margin-top: -10px;"><b><p align="center"><b>kitchen timer</b></p></b><p align="right" style="color: #000000; margin-left:-10px;"><b>I</b></p></div><br><br>
 <div class="container">
   <div class="setters">
     <div class="minutes-set">
@@ -94,6 +94,9 @@
             <button data-setter-three ="seconds-plus" type="submit" id="submit12"><b>+30s</b></button>
             <button data-setter-three ="seconds-plus" type="submit" id="submit9"><b>-30s</b></button>
             <button data-setter-three ="seconds-plus" type="submit" id="submit8"><b>-20s</b></button>
+            <button  data-setter-one="seconds-plus" type="submit" id="submit111"><b>-1m</b></button>
+            <button style="margin-left:13px;" data-setter-one="seconds-plus" type="submit" id="submit222"><b>-5m</b></button>
+            <button style="margin-left:13px;" data-setter-one="seconds-plus" type="submit" id="submit333"><b>-10m</b></button>
       </div>
 
       <br>
@@ -190,6 +193,15 @@
       document.querySelector('#submit3').onclick = function(){
          changeWholeTime(600);
       }
+      document.querySelector('#submit111').onclick = function(){
+         changeWholeTime(-60);
+      }
+      document.querySelector('#submit222').onclick = function(){
+         changeWholeTime(-300);
+      }
+      document.querySelector('#submit333').onclick = function(){
+         changeWholeTime(-600);
+      }
    </script>
    <script>
       document.querySelector('#submit11').onclick = function(){
@@ -234,7 +246,9 @@ var c2 = document.querySelector('#shest2');
 var r = document.querySelector('#shest3');
 let headingElement = document.querySelector('#topNavLine');
 let headingElement1 = document.querySelector('body');
+
 let head= document.querySelector('.e-c-progress');
+
 c1.onclick = function() {
    if (c1.checked) {
       headingElement.style.backgroundColor = '#ffc1c1';headingElement1.style.background = '#ffeaea';
@@ -250,6 +264,7 @@ r.onclick = function(){
 }
 c.onclick = function() {
    if (c.checked) {
+
       headingElement.style.backgroundColor = '#eeb1ff';headingElement1.style.background = '#fcf1ff';
    }
 }
