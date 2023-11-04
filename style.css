@@ -157,7 +157,7 @@ button[data-setter-two] {
     color: #000000;
     cursor: pointer;
 }
-button[data-setter-three]:hover {
+button[data-setter-two]:hover {
     opacity: 0.5;
 }
 button[data-setter-three] {
