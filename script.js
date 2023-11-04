@@ -6,6 +6,7 @@ var checkthree = document.getElementById('checkthree');
 var checkfour = document.getElementById('checkfour');
 var boolBLYAT = 0;
 
+
 var progressBarR = document.querySelector('.e-c-progress');
 let indicator = document.getElementById('e-indicator');
 let pointer = document.getElementById('e-pointer');
@@ -15,8 +16,8 @@ progressBarR.style.strokeDasharray = length;
 
 function playSound() {
   var audio = new Audio('./sound/tic.mp3');
-  audio.play();
   audio.volume = id_range.value;
+  audio.play();
 }
 function EndSound() {
   var audio = new Audio('./sound/sound_end/end.mp3');
@@ -88,6 +89,7 @@ function update(value, timePercent) {
 const displayOutput = document.querySelector('.display-remain-time');
 const pauseBtn = document.getElementById('pause');
 const setterBtns = document.querySelectorAll('button[data-setter]');
+const setterBtnsth = document.querySelectorAll('button[data-setter-th]');
 const setterBtnsOne = document.querySelectorAll('button[data-setter-one]');
 const setterBtnsthree = document.querySelectorAll('button[data-setter-three]');
 
@@ -109,6 +111,9 @@ function changeWholeTime(seconds){
   if ((wholeTime + seconds) >= 3600){ //ограничение на таймер - максимум 3600(1час)
     wholeTime = 3600; //условное ,после 3600 таймер обновляется до 3600
   }
+  /*wholeTime = 0;
+  var chide = document.querySelector("#hideselector2");
+  chide.onclick = function(){wholeTime = 0;}*/
 }
 
 for (var i = 0; i < setterBtns.length; i++) {
@@ -151,8 +156,29 @@ for (var i = 0; i < setterBtnsthree.length; i++) {
     displayTimeLeft(wholeTime);
   });
 }
+
 for (var i = 0; i < setterBtnsOne.length; i++) {
   setterBtnsOne[i].addEventListener("click", function(event) {
+      var param = this.dataset.setter;
+      switch (param) {
+          case 'minutes-plus':
+              changeWholeTime(1 * 60);
+              break;
+          case 'minutes-minus':
+              changeWholeTime(-1 * 60);
+              break;
+          case 'seconds-plus':
+              changeWholeTime(1);
+              break;
+          case 'seconds-minus':
+              changeWholeTime(-1);
+              break;
+      }
+    displayTimeLeft(wholeTime);
+  });
+}
+for (var i = 0; i < setterBtnsth.length; i++) {
+  setterBtnsth[i].addEventListener("click", function(event) {
       var param = this.dataset.setter;
       switch (param) {
           case 'minutes-plus':
@@ -186,7 +212,9 @@ checkthree.onclick = function(){
 checkfour.onclick = function(){
   boolBLYAT = 3;
   EndSoundd3();
+  
 }
+
 function timer (seconds){ //логика
   let remainTime = Date.now() + (seconds * 1000);
   displayTimeLeft(seconds);
@@ -209,6 +237,10 @@ function timer (seconds){ //логика
 
       });
       setterBtnsthree.forEach(function(btn){
+        btn.disabled = false;
+
+      });
+      setterBtnsth.forEach(function(btn){
         btn.disabled = false;
 
       });
@@ -237,7 +269,10 @@ function pauseTimer(event){
     });
     setterBtnsthree.forEach(function(btn){
       btn.disabled = true;
-
+    });
+    setterBtnsth.forEach(function(btn){
+      btn.disabled = true;
+      btn.style.opacity = 0.9;
     });
   }else if(isPaused){
     this.classList.remove('play');
