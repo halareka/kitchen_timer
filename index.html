@@ -47,7 +47,7 @@
 <!--вот тут сначит построим огромни меню -->
 
 <div align = "center" >
-<div id="topNavLine" style="border-radius: 10px;margin-top: -10px;"><b><p align="center"><b>kitchen timer</b></p></b><p align="right" style="color: #000000; margin-left:-10px;"><b>I</b></p></div><br><br>
+<div id="topNavLine"><b><p align="center"><b>kitchen timer</b></p></b><p align="right" style="color: #000000; margin-left:-10px;"><b>I</b></p></div><br><br>
 <div class="container">
   <div class="setters">
     <div class="minutes-set">
@@ -83,7 +83,7 @@
 
 
 
-
+   <button data-setter-three type="submit" id="hideselector" style="background:transparent;color: rgb(116, 116, 116); margin-left: 240px;"><b>setting</b></button>
 
    <div id="container" align="center">
       <div class="menu">
@@ -108,74 +108,91 @@
          </div>
  
       </div>
-      <div class="menu44" style="color:black;margin-left:-155px;" >
-         <div class="pr" >
-            <p style="color: rgb(40, 40, 40);margin-left: 20px;margin-top: 7px;"><b>цветовые<br>темы-фон</b></p>
-         </div>
-      </div>
-      <div class="menu55" style="color:black;margin-left:155px;margin-top: -75px;" >
-         <div class="pr" >
-            <p style="color: rgb(40, 40, 40);margin-left: 17px;margin-top: 7px;white-space:nowrap"><b>звук в конце<br><b style="margin-left: -13px;">таймера(звонок)</b></b></p>
-         </div>
-      </div>
-      <div class="menu4" style="color:black;margin-left:-155px;white-space:nowrap" >
-         <div class="pr">
-            
-            <table >
-               <tr>
-                  <td><input name="lol" type="radio" id="shest0"></td>
-                  <td style="color: rgb(103, 103, 103);"><b>фиолетовый</b></td>
-               </tr>
-               <tr>
-                  <td><input name="lol" type="radio" id="shest1"></td>
-                  <td style="color: rgb(103, 103, 103);"><b>розовый</b></td>
-               </tr>
-               <tr>
-                  <td><input name="lol" type="radio" id="shest2"></td>
-                  <td style="color: rgb(103, 103, 103);"><b>лаймовый</b></td>
-               </tr>
-               <tr>
-                  <td><input name="lol" type="radio" id="shest3"></td>
-                  <td style="color: rgb(103, 103, 103);"><b>темный</b></td>
-               </tr>
-            </table>
-         </div>
-      </div>
-      <div class="menu5" style="color:black;margin-left:155px;margin-top: -150px;" >
-         <div class="pr" >
-            <table >
+      <div class="hide">
 
-               <tr>
-                  <td><input type="radio" id="checkone" name="LOL"></td>
-                  <td style="color: rgb(103, 103, 103);"><b>советский</b></td>
-               </tr>
-               <tr>
-                  <td><input type="radio" id="checktwo" name="LOL"></td>
-                  <td style="color: rgb(103, 103, 103);"><b>колокольный</b></td>
-               </tr>
-               <tr>
-                  <td><input type="radio" id="checkthree" name="LOL"></td>
-                  <td style="color: rgb(103, 103, 103);"><b>быстрый</b></td>
-               </tr>
-               <tr>
-                  <td><input type="radio" id="checkfour" name="LOL"></td>
-                  <td style="color: rgb(103, 103, 103);"><b>звонкий</b></td>
-               </tr>
-            </table>
+         <div class="menu44" style="color:black;margin-left:-155px;" >
+            <div class="pr" >
+               <p style="color: rgb(40, 40, 40);margin-left: 20px;margin-top: 7px;"><b>цветовые<br>темы-фон</b></p>
+            </div>
          </div>
-      </div>
-      <div class="menu2"style="margin-top:10px;">
-         <div style="margin-top: -15px;">
-            <b style="color: #000000;">громкость звонка</b>
-            <b style="color:black;margin-left:0px;"><br>−</b><input type="range" min="0" max="1" step="0.001" value="0.5" id="id_range1"><b style="color:black;margin-left:0px;">+</b>
+         <div class="menu55" style="color:black;margin-left:155px;margin-top: -75px;" >
+            <div class="pr" >
+               <p style="color: rgb(40, 40, 40);margin-left: 17px;margin-top: 7px;white-space:nowrap"><b>звук в конце<br><b style="margin-left: -13px;">таймера(звонок)</b></b></p>
+            </div>
          </div>
+         <div class="menu4" style="color:black;margin-left:-155px;white-space:nowrap" >
+            <div class="pr">
+               
+               <table >
+                  <tr>
+                     <td><input name="lol" type="radio" id="shest0"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>фиолетовый</b></td>
+                  </tr>
+                  <tr>
+                     <td><input name="lol" type="radio" id="shest1"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>розовый</b></td>
+                  </tr>
+                  <tr>
+                     <td><input name="lol" type="radio" id="shest2"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>лаймовый</b></td>
+                  </tr>
+                  <tr>
+                     <td><input name="lol" type="radio" id="shest3"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>темный</b></td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+         <div class="menu5" style="color:black;margin-left:155px;margin-top: -150px;" >
+            <div class="pr" >
+               <table >
+   
+                  <tr>
+                     <td><input type="radio" id="checkone" name="LOL"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>советский</b></td>
+                  </tr>
+                  <tr>
+                     <td><input type="radio" id="checktwo" name="LOL"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>колокольный</b></td>
+                  </tr>
+                  <tr>
+                     <td><input type="radio" id="checkthree" name="LOL"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>быстрый</b></td>
+                  </tr>
+                  <tr>
+                     <td><input type="radio" id="checkfour" name="LOL"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>звонкий</b></td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+         <div class="menu2"style="margin-top:10px;">
+            <div style="margin-top: -15px;">
+               <b style="color: #000000;">громкость звонка</b>
+               <b style="color:black;margin-left:0px;"><br>−</b><input type="range" min="0" max="1" step="0.001" value="0.5" id="id_range1"><b style="color:black;margin-left:0px;">+</b>
+            </div>
+         </div>
+
       </div>
+
     
       
 
 
       
+      
+      <script>
+         document.querySelector("#hideselector").onclick = function(){
+            var gow = document.querySelector('.hide');
+            var computedStyle = getComputedStyle(gow);
+            if(computedStyle.display == 'none'){ 
+               gow.style.display = 'block';
 
+            }else{
+               gow.style.display = 'none';
+            }
+         }
+      </script>
 </div>
 
 
