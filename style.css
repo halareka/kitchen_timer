@@ -126,7 +126,7 @@ button[data-setter-one] {
     top: 0px;
     left: 0px;
     outline: none;
-    background-color:#ffffff8f;
+    background-color:transparent;
     border:none ;
     border-radius: 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -217,11 +217,43 @@ button[data-setter-th1]:hover {
 .menu{
     background: #ffffff; /* Цвет фона */
     color: #fff; /* Цвет текста */
-    padding:30px; /* Поля вокруг текста */
+
     border-radius: 15px; /* Уголки */
-    margin-top:-25px;
+    margin-top:40px;
+    width: 90px;
+    height: 120px;
+}
+.menu1{
+    background: #ffffff; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+
+    border-radius: 15px; /* Уголки */
+    margin-top:40px;
+    width: 45px;
+    height: 120px;
+    
+}
+.menu7{
+    position: absolute;
+    background: #ffffff; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 47px;
+    border-radius: 12px; /* Уголки */
+    margin-left: 197px;
+    margin-top: -38px;
 
 }
+.menu77{
+    position: absolute;
+    background: #ffffff; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 47px;
+    border-radius: 12px; /* Уголки */
+    margin-left: 255px;
+    margin-top: -38px;
+
+}
+
 .pr{
     border: rgb(198, 104, 104);
     background-color: transparent ;
@@ -230,14 +262,7 @@ button[data-setter-th1]:hover {
     margin-top: -22px;
     margin-left: -26px ;
 }
-.prr{
-    border: rgb(198, 104, 104);
-    background-color: transparent ;
 
-    position: relative;
-    margin-top: -22px;
-    margin-left: -20px ;
-}
 
 .menu2{
     background: #ffffff; /* Цвет фона */
@@ -335,3 +360,7 @@ input[type='range']::-webkit-slider-thumb {
     margin-top: -127px;
     margin-right: -110px;
   }
+button img {
+    height: 16px;
+    width: 16px;
+}
