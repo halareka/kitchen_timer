@@ -4,6 +4,7 @@ var checkone = document.getElementById('checkone');
 var checktwo = document.getElementById('checktwo');
 var checkthree = document.getElementById('checkthree');
 var checkfour = document.getElementById('checkfour');
+var checkfive = document.getElementById('checkfive');
 var boolBLYAT = 0;
 
 
@@ -41,7 +42,11 @@ function EndSound3() {
   var audio = new Audio('./sound/sound_end/end3.mp3');
   audio.play();
   audio.volume = id_range1.value;
-
+}
+function EndSound4() {
+  var audio = new Audio('./sound/sound_end/end4.mp3');
+  audio.play();
+  audio.volume = id_range1.value;
 }
 function EndSoundd() {
   var audio = new Audio('./sound/sound_endd/endd.mp3');
@@ -65,7 +70,11 @@ function EndSoundd3() {
   var audio = new Audio('./sound/sound_endd/endd3.mp3');
   audio.play();
   audio.volume = id_range1.value;
-
+}
+function EndSoundd4() {
+  var audio = new Audio('./sound/sound_endd/endd4.mp3');
+  audio.play();
+  audio.volume = id_range1.value;
 }
 
 function update(value, timePercent) {
@@ -211,10 +220,12 @@ checkthree.onclick = function(){
 }
 checkfour.onclick = function(){
   boolBLYAT = 3;
-  EndSoundd3();
-  
+  EndSoundd3(); 
 }
-
+checkfive.onclick = function(){
+  boolBLYAT = 3;
+  EndSoundd3(); 
+}
 function timer (seconds){ //логика
   let remainTime = Date.now() + (seconds * 1000);
   displayTimeLeft(seconds);
