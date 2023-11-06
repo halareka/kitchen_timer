@@ -219,12 +219,12 @@ checkthree.onclick = function(){
   EndSoundd2();
 }
 checkfour.onclick = function(){
-  boolBLYAT = 3;
+  boolBLYAT = 4;
   EndSoundd3(); 
 }
 checkfive.onclick = function(){
-  boolBLYAT = 3;
-  EndSoundd3(); 
+  boolBLYAT = 5;
+  EndSoundd4(); 
 }
 function timer (seconds){ //логика
   let remainTime = Date.now() + (seconds * 1000);
@@ -234,9 +234,29 @@ function timer (seconds){ //логика
     timeLeft = Math.round((remainTime - Date.now()) / 1000);
     if(timeLeft < 0){
 
-      if(boolBLYAT == 1){EndSound();}if(boolBLYAT == 2){EndSound1();}
-      if(boolBLYAT == 3){EndSound2();}if(boolBLYAT == 4){EndSound3();}
-      if(boolBLYAT == 0){EndSound();}
+      if(boolBLYAT == 1){
+        EndSound();
+      }
+      if(boolBLYAT == 2)
+      {
+        EndSound1();
+      }
+      if(boolBLYAT == 3)
+      {
+        EndSound2();
+      }
+      if(boolBLYAT == 4)
+      {
+        EndSound3();
+      }
+      if(boolBLYAT == 5)
+      {
+        EndSound4();
+      }
+      if(boolBLYAT == 0)
+      {
+        EndSound();
+      }
       clearInterval(intervalTimer);
       isStarted = false;
       setterBtns.forEach(function(btn){
