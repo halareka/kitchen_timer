@@ -6,7 +6,7 @@
   <title>кухонный-таймер</title>
   <link rel="stylesheet" href="./style.css">
   <style>
-    .menu button {
+   .menu button {
       margin: 0px;
     }
 
@@ -171,6 +171,10 @@
                      <td style="color: rgb(103, 103, 103);"><b>лаймовый</b></td>
                   </tr>
                   <tr>
+                     <td><input name="lol" type="radio" id="shest4"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>золотой</b></td>
+                  </tr>
+                  <tr>
                      <td><input name="lol" type="radio" id="shest3"></td>
                      <td style="color: rgb(103, 103, 103);"><b>темный</b></td>
                   </tr>
@@ -196,6 +200,10 @@
                   <tr>
                      <td><input type="radio" id="checkfour" name="LOL"></td>
                      <td style="color: rgb(103, 103, 103);"><b>звонкий</b></td>
+                  </tr>
+                  <tr>
+                     <td><input type="radio" id="checkfive" name="LOL"></td>
+                     <td style="color: rgb(103, 103, 103);"><b>электронный</b></td>
                   </tr>
                </table>
             </div>
@@ -302,6 +310,7 @@ var c = document.querySelector('#shest0');
 var c1 = document.querySelector('#shest1');
 var c2 = document.querySelector('#shest2');
 var r = document.querySelector('#shest3');
+var r2 = document.querySelector('#shest4');
 let headingElement = document.querySelector('#topNavLine');
 let headingElement1 = document.querySelector('body');
 
@@ -320,6 +329,9 @@ c2.onclick = function() {
 r.onclick = function(){
    headingElement.style.background = '#545454';headingElement1.style.background = 'rgb(238, 239, 240)';
 }
+r2.onclick = function(){
+   headingElement.style.background = '#dad56c';headingElement1.style.background = '#fffdd2';
+}   
 c.onclick = function() {
    if (c.checked) {
 
