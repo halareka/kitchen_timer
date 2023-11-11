@@ -17,64 +17,64 @@ progressBarR.style.strokeDasharray = length;
 
 function playSound() {
   var audio = new Audio('./sound/tic.mp3');
-  audio.volume = id_range.value;
+  audio.volume = document.getElementById('id_range').value;
   audio.play();
 }
 function EndSound() {
   var audio = new Audio('./sound/sound_end/end.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 
 }
 function EndSound1() {
   var audio = new Audio('./sound/sound_end/end1.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 
 }
 function EndSound2() {
   var audio = new Audio('./sound/sound_end/end2.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 
 }
 function EndSound3() {
   var audio = new Audio('./sound/sound_end/end3.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 }
 function EndSound4() {
   var audio = new Audio('./sound/sound_end/end4.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 }
 function EndSoundd() {
   var audio = new Audio('./sound/sound_endd/endd.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 
 }
 function EndSoundd1() {
   var audio = new Audio('./sound/sound_endd/endd1.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 
 }
 function EndSoundd2() {
   var audio = new Audio('./sound/sound_endd/endd2.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 
 }
 function EndSoundd3() {
   var audio = new Audio('./sound/sound_endd/endd3.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 }
 function EndSoundd4() {
   var audio = new Audio('./sound/sound_endd/endd4.mp3');
   audio.play();
-  audio.volume = id_range1.value;
+  audio.volume = document.getElementById('id_range1').value;
 }
 
 function update(value, timePercent) {
