@@ -1,7 +1,22 @@
 //кнопочки и начало таймера
-document.querySelector('#hsel2').onclick = function(){
-  location.reload();
+
+var fiveSecondsButton = document.getElementById('fiveSeconds');
+var tenSecondsButton = document.getElementById('tenSeconds');
+
+var audioDuration = 0;
+
+fiveSecondsButton.onclick = function() {
+  audioDuration = 5000;
 }
+
+tenSecondsButton.onclick = function() {
+  audioDuration = 10000;
+}
+
+
+//чоовы
+
+
 var mute = 0;
 var checkone = document.getElementById('checkone');
 var checktwo = document.getElementById('checktwo');
@@ -27,44 +42,48 @@ function playSound() {
 }
 function EndSound() {
   var audio = new Audio('./sound/sound_end/end.mp3');
-  
   audio.volume = document.getElementById('id_range1').value;
-  
   audio.play();
-
+  setTimeout(function() {
+    audio.pause();
+    audio.currentTime = 0;
+  }, audioDuration);
   document.getElementById("muteButton").onclick = function() {
     audio.volume = 0; // Обновляем громкость звука
   }
-
 }
 function EndSound1() {
   var audio = new Audio('./sound/sound_end/end1.mp3');
   audio.volume = document.getElementById('id_range1').value;
-  
   audio.play();
-
+  setTimeout(function() {
+    audio.pause();
+    audio.currentTime = 0;
+  }, audioDuration);
   document.getElementById("muteButton").onclick = function() {
     audio.volume = 0; // Обновляем громкость звука
   }
-
 }
 function EndSound2() {
   var audio = new Audio('./sound/sound_end/end2.mp3');
   audio.volume = document.getElementById('id_range1').value;
-  
   audio.play();
-
+  setTimeout(function() {
+    audio.pause();
+    audio.currentTime = 0;
+  }, audioDuration);
   document.getElementById("muteButton").onclick = function() {
     audio.volume = 0; // Обновляем громкость звука
   }
-
 }
 function EndSound3() {
   var audio = new Audio('./sound/sound_end/end3.mp3');
   audio.volume = document.getElementById('id_range1').value;
-  
   audio.play();
-
+  setTimeout(function() {
+    audio.pause();
+    audio.currentTime = 0;
+  }, audioDuration);
   document.getElementById("muteButton").onclick = function() {
     audio.volume = 0; // Обновляем громкость звука
   }
@@ -72,9 +91,11 @@ function EndSound3() {
 function EndSound4() {
   var audio = new Audio('./sound/sound_end/end4.mp3');
   audio.volume = document.getElementById('id_range1').value;
-  
   audio.play();
-
+  setTimeout(function() {
+    audio.pause();
+    audio.currentTime = 0;
+  }, audioDuration);
   document.getElementById("muteButton").onclick = function() {
     audio.volume = 0; // Обновляем громкость звука
   }
