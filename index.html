@@ -61,6 +61,7 @@
 
    }
   </style>
+
 </head>
 <body>
 <!--вот тут сначит построим огромни меню -->
@@ -112,9 +113,14 @@
    <div class="menu777">
       <button data-setter-th2 style="margin-top: 2px;" id="col17" type="submit"><b>настройка цветов</b></button>
    </div>
+   <div class="menu777" style="margin-top: -77px;">
+      <button data-setter-th2 style="margin-top: 2px;"  id="muteButton" type="submit"><b>заглушить звонок</b></button>
+   </div>
 
 
       <div class="menu" style="margin-left: -210px;">
+         
+
             <button  data-setter-one="seconds-plus" type="submit" id="submit1"><b>+1m</b></button>
             <button  data-setter-one="seconds-plus" type="submit" id="submit2"><b>+5m</b></button>
             <button  data-setter-one="seconds-plus" type="submit" id="submit3"><b>+10m</b></button>
@@ -288,6 +294,7 @@
                document.querySelector("input[type=submit]").style.background = frameColor;
                //ещесложнее наху
                document.getElementById("col").style.color = buttonColor;
+               document.getElementById("muteButton").style.color = buttonColor;
                document.getElementById("col1").style.color = buttonColor;
                document.getElementById("col2").style.color = buttonColor;
                document.getElementById("col3").style.color = buttonColor;
@@ -348,6 +355,7 @@
                   document.querySelector(".menu777").style.background = "white";
                   document.querySelector("input[type=submit]").style.background = "white";
                   //ещесложнее наху
+                  document.getElementById("muteButton").style.color = buttonColor;
                   document.getElementById("col").style.color = '#545454';
                   document.getElementById("col1").style.color = '#545454';
                   document.getElementById("col2").style.color = '#545454';
