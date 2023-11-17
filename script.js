@@ -1,5 +1,8 @@
 //кнопочки и начало таймера
-
+document.querySelector('#hsel2').onclick = function(){
+  location.reload();
+}
+var mute = 0;
 var checkone = document.getElementById('checkone');
 var checktwo = document.getElementById('checktwo');
 var checkthree = document.getElementById('checkthree');
@@ -15,6 +18,8 @@ let length = Math.PI * 2 * 100;
 
 progressBarR.style.strokeDasharray = length;     
 
+
+
 function playSound() {
   var audio = new Audio('./sound/tic.mp3');
   audio.volume = document.getElementById('id_range').value;
@@ -22,31 +27,57 @@ function playSound() {
 }
 function EndSound() {
   var audio = new Audio('./sound/sound_end/end.mp3');
-  audio.play();
+  
   audio.volume = document.getElementById('id_range1').value;
+  
+  audio.play();
+
+  document.getElementById("muteButton").onclick = function() {
+    audio.volume = 0; // Обновляем громкость звука
+  }
 
 }
 function EndSound1() {
   var audio = new Audio('./sound/sound_end/end1.mp3');
-  audio.play();
   audio.volume = document.getElementById('id_range1').value;
+  
+  audio.play();
+
+  document.getElementById("muteButton").onclick = function() {
+    audio.volume = 0; // Обновляем громкость звука
+  }
 
 }
 function EndSound2() {
   var audio = new Audio('./sound/sound_end/end2.mp3');
-  audio.play();
   audio.volume = document.getElementById('id_range1').value;
+  
+  audio.play();
+
+  document.getElementById("muteButton").onclick = function() {
+    audio.volume = 0; // Обновляем громкость звука
+  }
 
 }
 function EndSound3() {
   var audio = new Audio('./sound/sound_end/end3.mp3');
-  audio.play();
   audio.volume = document.getElementById('id_range1').value;
+  
+  audio.play();
+
+  document.getElementById("muteButton").onclick = function() {
+    audio.volume = 0; // Обновляем громкость звука
+  }
 }
 function EndSound4() {
   var audio = new Audio('./sound/sound_end/end4.mp3');
-  audio.play();
   audio.volume = document.getElementById('id_range1').value;
+  
+  audio.play();
+
+  document.getElementById("muteButton").onclick = function() {
+    audio.volume = 0; // Обновляем громкость звука
+  }
 }
 function EndSoundd() {
   var audio = new Audio('./sound/sound_endd/endd.mp3');
@@ -104,7 +135,7 @@ const setterBtnsthree = document.querySelectorAll('button[data-setter-three]');
 
 let intervalTimer;
 let timeLeft ;
-let wholeTime = 0.5 * 60; // начальное время таймера
+let wholeTime = 0.5 * 10; // начальное время таймера
 let isPaused = false;
 let isStarted = false;
 
@@ -301,10 +332,7 @@ function pauseTimer(event){
     setterBtnsthree.forEach(function(btn){
       btn.disabled = true;
     });
-    setterBtnsth.forEach(function(btn){
-      btn.disabled = true;
-      btn.style.opacity = 0.9;
-    });
+
   }else if(isPaused){
     this.classList.remove('play');
     this.classList.add('pause');
