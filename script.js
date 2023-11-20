@@ -3,7 +3,7 @@
 var fiveSecondsButton = document.getElementById('fiveSeconds');
 var tenSecondsButton = document.getElementById('tenSeconds');
 
-var audioDuration = 0;
+var audioDuration = 12000;
 
 fiveSecondsButton.onclick = function() {
   audioDuration = 5000;
