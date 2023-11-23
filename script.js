@@ -16,7 +16,7 @@ tenSecondsButton.onclick = function() {
 
 //чоовы
 
-
+var tileleft;
 var mute = 0;
 var checkone = document.getElementById('checkone');
 var checktwo = document.getElementById('checktwo');
@@ -38,6 +38,7 @@ progressBarR.style.strokeDasharray = length;
 function playSound() {
   var audio = new Audio('./sound/tic.mp3');
   audio.volume = document.getElementById('id_range').value;
+  console.log("TICK")
   audio.play();
 }
 function EndSound() {
@@ -130,17 +131,25 @@ function EndSoundd4() {
 }
 
 function update(value, timePercent) {
-
-  playSound();
+  console.log(timeLeft);
+  tileleft = timeLeft - 1;
 	var offset = - length - length * value / (timePercent);
 	progressBarR.style.strokeDashoffset = offset; 
 	pointer.style.transform = `rotate(${360 * value / (timePercent)}deg)`; 
+  if(tileleft <= timeLeft){
+    if(tileleft != -2 )
+    {
+      playSound();
+    }
+    
+  }
   if(isStarted === true){
         setterBtnsOne.forEach(function(btn){
       btn.disabled = true;
       btn.style.opacity = 0.9;
     });
   }
+  
   
 };
 
